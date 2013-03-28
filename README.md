@@ -115,4 +115,5 @@ Future versions of pyGrid will take over some of those functions and simplify th
 
 * Placing text or images in a cell
 * Drawing functions: lines, circles, etc.
+* ability to draw grid at any location in pygame canvas, rather than filling entire window
 
