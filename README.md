@@ -40,29 +40,29 @@ Below is a more complete grid, followed by a quick explanation of what each attr
 
 The first four attributes are the ones we just talked about above, the others are listed as follows.
 
+#### border_weight: 1
+
 Size (in pixels) of the margins between cells
 
-    border_weight: 1
+#### border_color: (0,0,0)
 
 Color of margins between cells, RGB value (in this case, we set it to black)
 
-    border_color: (0,0,0)
+#### off_color: (50,50,50)
 
 Default color of grid cells, which we've set to a dark grey here
 
-    off_color: (50,50,50)
+#### on_color: (0,0,255)
 
 Color of 'on' cells. We'll see what this means in a moment. Here, we've set it to blue.
 
-    on_color: (0,0,255)
+#### radius: 2
 
 Corner radius of cells. We've set it to 2 pixels, which will subtly round the corners of our cells.
 
-    radius: 2
+#### caption: "My Awesome Game"
 
 This sets the title of your game window. If not set, it will default to "PyGrid Project" so make sure to set this for that professional touch!
-
-    caption: "My Awesome Game"
 
 That's all you need to fully customize your pyGrid. Remember, all of these are optional, but if you want to set the caption for example, you'll have to set all of the values that show up before it. You can get around this by changing it after creating your grid. All attributes can be changed except for the first 5: width, height, cell_width, cell_height, border_weight, as these affect the size of the grid window.
 
@@ -116,4 +116,3 @@ Future versions of pyGrid will take over some of those functions and simplify th
 * Placing text or images in a cell
 * Drawing functions: lines, circles, etc.
 * ability to draw grid at any location in pygame canvas, rather than filling entire window
-
