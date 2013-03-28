@@ -116,6 +116,11 @@ while done == False:
         food_x = random.randrange(1, grid.width - 1)
         food_y = random.randrange(1, grid.height - 1)
 
+        while grid.cell_state(food_x, food_y) == 1:
+            # Make sure food doesn't spawn on the snake.
+            food_x = random.randrange(1, grid.width - 1)
+            food_y = random.randrange(1, grid.height - 1)
+            
         grid.on(food_x, food_y, 2, (255, 0, 0))
 
     if (body[len(body) - 1][0] == grid.width - 1) and (direction == 'right'):
