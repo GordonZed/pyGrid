@@ -87,9 +87,12 @@ class pyGrid:
                 else:
                     cell_state_color = self.off_color
 
-
-                pygame.draw.rect(self.screen, cell_state_color,
-                [x_pos, y_pos, self.cell_width, self.cell_height])
+                if self.radius == 0:
+                    pygame.draw.rect(self.screen, cell_state_color,
+                    [x_pos, y_pos, self.cell_width, self.cell_height])
+                else:
+                    padlib.draw.rrect(self.screen, cell_state_color,
+                    (x_pos, y_pos, self.cell_width, self.cell_height), self.radius, 0)
 
             # Flip screen and whatnot
             pygame.display.flip()
