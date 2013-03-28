@@ -68,6 +68,7 @@ class pyGrid:
         self.screen.fill(self.border_color)
 
     def draw(self):
+        self.screen.fill(self.border_color)
         for y in xrange(0, self.height):
             if y == 0:
                 y_pos = self.border_weight
