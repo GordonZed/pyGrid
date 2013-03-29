@@ -141,8 +141,12 @@ class pyGrid:
         else:
             x_pos = (self.border_weight * x) + (self.cell_width * x) + self.border_weight
 
-        pygame.draw.rect(self.screen, self.off_color,
-        [x_pos, y_pos, self.cell_width, self.cell_height])
+        if self.radius == 0:
+            pygame.draw.rect(self.screen, self.off_color,
+            [x_pos, y_pos, self.cell_width, self.cell_height])
+        else:
+            padlib.draw.rrect(self.screen, self.off_color,
+            (x_pos, y_pos, self.cell_width, self.cell_height), self.radius, 0)
 
         # Flip screen and whatnot
         pygame.display.flip()
